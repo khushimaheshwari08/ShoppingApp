@@ -41,7 +41,8 @@ const Home = ({navigation}) => {
 
   const ProductCard = ({data}) => {
     return (
-      <TouchableOpacity onPress={()=> navigation.navigate('productInfo',{productID:data.id})}
+      <TouchableOpacity
+        onPress={() => navigation.navigate('productInfo', {productID: data.id})}
         style={{
           width: '48%',
           marginVertical: 14,
@@ -177,7 +178,7 @@ const Home = ({navigation}) => {
               }}
             />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('myCart')}>
             <MaterialCommunityIcons
               name="cart"
               style={{
